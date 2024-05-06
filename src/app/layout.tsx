@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,46 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      
+      <body className={inter.className}>
+        <Navbar/>
+        {children}
+
+
+        <footer className="bg-neutral-800 py-20">
+          <section className="mx-auto w-1240 text-neutral-200">
+            <h1 className="text-white text-3xl font-bold mb-5">Fitness Tracker</h1>
+            <div className="grid grid-cols-3">
+              <div className="flex flex-col">
+                <h3 className="font-bold text-lg border-b-2 mb-3 border-blue-500 w-max">Heading 1</h3>
+                <p>Link 1</p>
+                <p>Link 2</p>
+                <p>Link 3</p>
+              </div>
+
+              <div className="flex flex-col">
+                <h3 className="font-bold text-lg border-b-2 mb-3 border-blue-500 w-max">Heading 2</h3>
+                <p>Link 4</p>
+                <p>Link 5</p>
+                <p>Link 6</p>
+              </div>
+
+              <div className="flex flex-col">
+                <h3 className="font-bold text-lg border-b-2 mb-3 border-blue-500 w-max">Heading 3</h3>
+                <p>Link 7</p>
+                <p>Link 8</p>
+                <p>Link 9</p>
+              </div>
+
+            </div>
+            
+            
+            <p className="text-center mt-20 text-white">All right are reserved © 2024</p>
+
+          </section>
+        </footer>
+
+      </body>
     </html>
   );
 }
