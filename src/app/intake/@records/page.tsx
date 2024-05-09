@@ -1,15 +1,23 @@
 import Link from 'next/link'
 import React from 'react'
 
-let records = {
+export let records:Records = {
   backSquats:[
-    {weight:80,date:'23/10/21'},
-    {weight:83,date:'25/11/21'},
+    {weight:80,date:new Date('October 23, 2021')},
+    {weight:83,date:new Date('November 04, 2021')},
+    {weight:97,date:new Date('November 05,2021')},
   ],
   pullUps:[
-    {weight:15,date:'28/11/21'},
-    {weight:24,date:'03/12/21'}
+    {weight:15,date:new Date('January 15, 2022')},
+    {weight:24,date:new Date('April 18, 2022')}
   ]
+}
+
+export type Records = {
+  [key:string]:{
+   weight:number,
+   date:Date, 
+  }[]
 }
 
 function page() {
