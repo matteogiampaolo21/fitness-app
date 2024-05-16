@@ -26,7 +26,7 @@ export type Records = {
 async function page() {
 
 
-  async function getData(){
+  async function getData():Promise<Records>{
     const docRef = doc(db, "records", "ZJgsvvE5ArG3KWH1JxUX");
     const docSnap = await getDoc(docRef);
 
@@ -44,7 +44,7 @@ async function page() {
 
 
   return (
-    <article className='border-black border rounded p-3'>
+    <article className='border-black border rounded p-3 h-max'>
       <h2 className='text-lg'>Personal Records</h2>
 
 
